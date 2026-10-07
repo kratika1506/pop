@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+#define max_size 10
+int top=-1,stack[max_size];
+void pop(int n);
+void display();
+int main()
+{
+    pop(10);
+    pop(20);
+    pop(30);
+    pop(40);
+    pop(50);
+    pop(60);
+    pop(70);
+    pop(80);
+    pop(90);
+    pop(100);
+    display();
+    pop(200);
+    return 0;
+}
+void pop(int n)
+{
+    if(top>=max_size-1)
+    cout<<"/nUnderflow/n";
+    top++;
+    stack[top]=n;
+}
+void display()
+{
+    for(int i=0;i<=top;i++)
+cout<<stack[i]<<"";
+ cout<<"/n";   
+}
